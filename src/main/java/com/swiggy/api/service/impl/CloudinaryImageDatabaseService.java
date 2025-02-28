@@ -1,14 +1,14 @@
-package com.swiggy.api.service;
+package com.swiggy.api.service.impl;
 
 import com.swiggy.api.model.foodCategory;
-import com.swiggy.api.repo.category;
+import com.swiggy.api.repo.CategoryRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CloudinaryImageDatabaseService {
     @Autowired
-    private category categoryRepo;
+    private CategoryRepo categoryRepo;
 
     public foodCategory saveImage(String name, String url) {
         try {

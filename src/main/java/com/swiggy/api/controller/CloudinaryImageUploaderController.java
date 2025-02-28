@@ -1,10 +1,7 @@
 package com.swiggy.api.controller;
 
-import com.swiggy.api.model.foodCategory;
-import com.swiggy.api.repo.category;
-import com.swiggy.api.service.CloudinaryImageDatabaseService;
+import com.swiggy.api.service.impl.CloudinaryImageDatabaseService;
 import com.swiggy.api.service.CloudinaryImageService;
-import com.swiggy.api.service.impl.CloudinaryServiceImageServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
