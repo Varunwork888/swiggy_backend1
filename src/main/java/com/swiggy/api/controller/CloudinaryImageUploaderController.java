@@ -20,7 +20,9 @@ public class CloudinaryImageUploaderController {
     private CloudinaryImageService cloudinaryServiceImageService;
     @PostMapping
     public ResponseEntity<Map> uploadImage(@RequestParam("image")MultipartFile file){
-       Map data= this.cloudinaryServiceImageService.upload(file);
-       return new ResponseEntity<>(data, HttpStatus.OK);
+        Map data= this.cloudinaryServiceImageService.upload(file);
+        String fileName = file.getOriginalFilename();
+        String url = (String) data.get("url");
+        return new ResponseEntity<>(data, HttpStatus.OK);
     }
 }
